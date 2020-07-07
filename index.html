@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous"> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <title>webサイト制作テンプレート</title>
   </head>
   <body>
@@ -23,17 +23,17 @@
         </div>
       </div>
 
-    </nav>
-    <div class="ribholder">
-      <div class="ribbon">
-        <div id="nav-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
+      <div class="ribholder">
+        <div class="ribbon">
+          <div id="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
-    </div>
+    </nav>
 
     <div class="myfooter">
       <h1>CONTACT + INFOMATION</h1>
@@ -47,10 +47,17 @@
         <a href=""><img src="" alt=""></a>
       </div>
     </div>
-  </body>
-  <script type="text/javascript">
 
-  </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $('.ribbon').click(function(){
+        $('#nav-icon').toggleClass('open');
+        $('#nav-icon span').toggleClass('red');
+        $('nav').toggleClass('visible');
+      })
+    })
+    </script>
+  </body>
 </html>
 
 <!--
